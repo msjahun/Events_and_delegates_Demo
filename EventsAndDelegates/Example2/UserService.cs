@@ -14,15 +14,10 @@ namespace EventsAndDelegates.Example2
         //event of delegate
         //publisher event
 
-        public delegate void UserInsertEventHandler(Object source, UserEventArgs args);
-        public event UserInsertEventHandler UserInsertEvent;
-
-
-        public delegate void UserDeleteEventHandler(Object source, UserEventArgs args);
-        public event UserDeleteEventHandler UserDeleteEvent;
-
-        public delegate void UserUpdateEventHandler(Object source, UserEventArgs  args);
-        public event UserUpdateEventHandler UserUpdateEvent;
+      
+        public EventHandler<UserEventArgs> UserInsertEvent;
+        public EventHandler<UserEventArgs> UserDeleteEvent;
+        public EventHandler<UserEventArgs> UserUpdateEvent;
 
         public void InsertUser(User user)
         {
