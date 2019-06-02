@@ -34,6 +34,8 @@ namespace EventsAndDelegates
 
             //subscribe
             _userService.UserInsertEvent += _notificationService.OnInsertUser;
+            _userService.UserInsertEvent += _notificationService.OnInsertUser;
+            _userService.UserInsertEvent += _notificationService.OnInsertUser;
             _userService.UserDeleteEvent += _notificationService.OnDeleteUser;
             _userService.UserUpdateEvent += _notificationService.OnUpdateUser;
 
